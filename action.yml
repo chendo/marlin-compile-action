@@ -1,6 +1,10 @@
 name: 'Marlin Compiler'
 description: 'Compiles Marlin and exposes the resulting firmware binary as an artifact'
 inputs:
+  platformio_args:
+    description: 'Arguments passed to platformio run'
+    required: false
+    default: ''
   configuration_path: 
     description: 'Path to look for Configuration.h / Configuration_adv.h'
     required: false
@@ -12,4 +16,4 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.configuration_path }}
+    - ${{ inputs.platformio_args }}
