@@ -6,6 +6,4 @@ cd $GITHUB_WORKSPACE
 
 export
 
-platformio run
-
-find .pio/build/*.{bin,hex,elf}
+platformio run $(INPUT_PLATFORMIO_ARGS)
