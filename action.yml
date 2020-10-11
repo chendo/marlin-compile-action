@@ -1,0 +1,15 @@
+name: 'Marlin Compiler'
+description: 'Compiles Marlin and exposes the resulting firmware binary as an artifact'
+inputs:
+  configuration_path: 
+    description: 'Path to look for Configuration.h / Configuration_adv.h'
+    required: false
+    default: './Marlin/Marlin'
+outputs:
+  logs: 
+    description: 'Build logs'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.configuration_path }}
