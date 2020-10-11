@@ -15,3 +15,5 @@ if [ -n "$INPUT_CONFIGURATION_ADV_URL" ]; then
 fi
 
 platformio run $INPUT_PLATFORMIO_ARGS
+
+ls -alt .pio/build/*/firmware*
