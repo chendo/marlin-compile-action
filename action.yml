@@ -5,10 +5,12 @@ inputs:
     description: 'Arguments passed to platformio run'
     required: false
     default: ''
-  configuration_path: 
-    description: 'Path to look for Configuration.h / Configuration_adv.h'
+  configuration_url: 
+    description: 'URL for Configuration.h'
     required: false
-    default: './Marlin/Marlin'
+  configuration_adv_url: 
+    description: 'URL for Configuration_adv.h'
+    required: false
 outputs:
   logs: 
     description: 'Build logs'
