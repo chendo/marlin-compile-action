@@ -1,3 +1,5 @@
 #!/bin/bash
 
-echo "Hello world"
+cd $GITHUB_WORKSPACE
+
+platformio run
